@@ -4,6 +4,8 @@
 // Hint: you can keep a cache of the URLs that have been fetched on a map,
 // but maps alone are not safe for concurrent use!
 
+// LINK TO ORIGINAL EXERCISE: https://go.dev/tour/concurrency/10
+
 package main
 
 import (
