@@ -2,6 +2,7 @@ package main
 
 import (
 	"fmt"
+	"log"
 	"math/rand"
 	"os"
 	"os/exec"
@@ -68,7 +69,9 @@ func printBoard(board [][]int) {
 	// Clear previous output
 	cmd := exec.Command("clear")
 	cmd.Stdout = os.Stdout
-	cmd.Run()
+	if err := cmd.Run(); err != nil {
+		log.Fatal("running command to stdout resulted in error")
+	}
 
 	var output strings.Builder
 
